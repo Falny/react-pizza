@@ -1,0 +1,80 @@
+.sort {
+  position: relative;
+  width: 250px;
+  cursor: pointer;
+
+  b {
+    font-size: 17px;
+
+    @media (max-width: 1300px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 775px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 430px) {
+      font-size: 11px;
+    }
+  }
+
+  span {
+    color: #ff8324;
+    border-bottom: 2px dashed #ff8324;
+    font-size: 17px;
+
+    @media (max-width: 1300px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 775px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 430px) {
+      font-size: 11px;
+    }
+  }
+
+  .sort-block {
+    position: absolute;
+    right: 0;
+    top: 40px;
+
+    .sort-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: max-content;
+      padding: 5px 0;
+
+      .sort-item {
+        font-size: 15px;
+        padding: 10px 20px;
+        transition: all 0.3s;
+
+        @media (max-width: 1300px) {
+          font-size: 13px;
+          padding: 5px 15px;
+        }
+
+         @media (max-width: 430px) {
+            font-size: 11px;
+            padding: 3px 10px;
+        }
+
+        &:hover {
+          color: #ff8324;
+          background-color: #ffcaa2;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}

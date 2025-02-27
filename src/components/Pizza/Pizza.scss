@@ -1,0 +1,178 @@
+.pizza {
+  text-align: center;
+  width: fit-content;
+
+  .pizza-img {
+    width: 300px;
+    height: 280px;
+
+    @media (max-width: 1300px) {
+      width: 225px;
+      height: 215px;
+    }
+
+    @media (max-width: 775px) {
+      width: 165px;
+      height: 160px;
+    }
+
+    @media (max-width: 430px) {
+      width: 145px;
+      height: 140px;
+    }
+  }
+
+  .pizza-title {
+    margin: 20px 0;
+    font-weight: 800;
+    font-size: 21px;
+
+    @media (max-width: 1300px) {
+      margin: 15px 0;
+      font-size: 17px;
+    }
+
+    @media (max-width: 775px) {
+      margin: 9px 0;
+      font-size: 13px;
+    }
+
+    @media (max-width: 430px) {
+      font-size: 11px;
+    }
+  }
+
+  .pizza-block {
+    background-color: #eaeaea;
+    border-radius: 10px;
+    font-size: 16px;
+
+    @media (max-width: 1300px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 775px) {
+      font-size: 11px;
+    }
+
+    .pizza-type,
+    .pizza-diametr {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 5px 5px 0 5px;
+
+      .pizza-type-item,
+      .pizza-diametr-item {
+        padding: 10px;
+        flex-grow: 1;
+        cursor: pointer;
+
+        @media (max-width: 1300px) {
+          padding: 7px;
+        }
+
+        @media (max-width: 775px) {
+          padding: 4px;
+        }
+      }
+
+      .active-pizza-parametr {
+        background-color: #fafafa;
+        border-radius: 5px;
+      }
+
+      .inactive-parametr {
+        color: #bebebe;
+        background-color: #eaeaea;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+
+    .pizza-diametr {
+      padding-bottom: 5px;
+    }
+  }
+  .pizza-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    .pizza-price {
+      font-size: 22px;
+      font-weight: 800;
+
+      @media (max-width: 1300px) {
+        font-size: 17px;
+      }
+
+      @media (max-width: 775px) {
+        font-size: 13px;
+      }
+    }
+
+    .pizza-add-cart {
+      color: #ff8324;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 10px;
+      background-color: transparent;
+      border: 2px solid #ff8324;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+        @media (max-width: 1300px) {
+          font-size: 13px;
+          padding: 4px 5px;
+        }
+
+        @media (max-width: 775px) {
+          font-size: 10px;
+        }
+
+      .pizza-add-plus {
+        font-size: 20px;
+        font-weight: 900;
+        
+
+        @media (max-width: 775px) {
+          font-size: 10px;
+        }
+
+        @media (max-width: 430px) {
+          display: none;
+        }
+      }
+
+      span {
+        color: #fff;
+        padding: 2px 7px;
+        background-color: #ff8324;
+        border-radius: 100%;
+        transition: all 0.3s;
+        font-size: 17px;
+        margin-left: 3px;
+
+        @media (max-width: 775px) {
+          font-size: 10px;
+        }
+      }
+
+      &:hover {
+        transition: all 0.3s;
+        background-color: #ff8324;
+        color: #fff;
+
+        span {
+          color: #ff8324;
+          background-color: #fff;
+          transition: all 0.3s;
+          
+        }
+      }
+    }
+  }
+}

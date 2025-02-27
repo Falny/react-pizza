@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #fff1cd;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrapper {
+  width: calc(100vw - 200px);
+  background-color: #fff;
+  border-radius: 30px;
+  height: fit-content;
+  margin: 40px auto;
+  padding: 30px 50px;
+
+  @media (max-width: 775px) {
+    padding: 20px;
+    width: calc(100vw - 100px);
+  }
+
+  @media (max-width: 430px) {
+    padding: 15px;
+    width: calc(100vw - 50px);
+    margin: 20px auto;
+  }
+
+  .app-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 50px;
+
+    @media (max-width: 1160px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (max-width: 775px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 430px) {
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    user-select: none;
+
+    li {
+      padding: 10px 15px;
+      border-radius: 100%;
+      border: 1px solid #ff7010;
+
+      a{
+        color: #ff7010;
+      }
+    }
+
+    .selected{
+        background-color: #ff7010;
+        a{
+            color: #fff;
+            
+        }
+    }
+
+    .next, .previous{
+        transition: all .3s;
+        
+        &:hover{
+            background-color: #ff7010;
+            transition: all .3s;
+            
+            a{
+                color: #fff;
+            }
+        }
+    }
+  }
+}

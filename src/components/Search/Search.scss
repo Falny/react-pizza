@@ -1,0 +1,30 @@
+.search{
+    position: relative;
+
+    .search-input{
+        width: 300px;
+        height: 40px;
+        outline: none;
+        border-radius: 20px;
+        border: 1px solid #ff7010;
+        padding-left: 20px;
+        color: #ff7010;
+        font-size: 17px;
+    }
+
+    .search-input::placeholder{
+        color: #ff7010;
+        font-size: 17px;
+    }
+
+    span{
+        position: absolute;
+        color: #ff7010;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        cursor: pointer;
+    }
+
+
+}

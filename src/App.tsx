@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { FetchData, fetchPizzas } from "./redux/slices/pizzaSlice";
-import { FilterState, setFilters } from "./redux/slices/filterSlice";
+import { setFilters } from "./redux/slices/filterSlice";
 
 import { sortList } from "./components/Sort";
 import { AppDispatch, RootState } from "./redux/store";
@@ -71,7 +71,7 @@ export const App = () => {
 
       isSearch.current = true;
     }
-  }, []);
+  }, [currentPage, dispatch]);
 
   React.useEffect(() => {
     if (!isSearch.current) {
@@ -79,7 +79,7 @@ export const App = () => {
     }
 
     isSearch.current = false;
-  }, [category, sort, valueInput, currentPage]);
+  }, [category, sort, valueInput, currentPage, fetchData]);
 
   React.useEffect(() => {
     if (isMounted.current) {
@@ -94,7 +94,7 @@ export const App = () => {
     }
 
     isMounted.current = true;
-  }, [category, sort, currentPage, valueInput]);
+  }, [category, sort, currentPage, valueInput, navigate]);
 
   return (
     <div className="wrapper">

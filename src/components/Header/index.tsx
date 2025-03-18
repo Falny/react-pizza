@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
     <>
       <div className="header">
         <Link to="/" className="header-left">
-          <img src="/assets/pizza-logo.svg" className="header-logo" />
+          <img src="/assets/pizza-logo.svg" className="header-logo" alt='logo'/>
           <div className="header-name">
             <h2>Pizza</h2>
             <p>Самая вкусная пицца на всей земле</p>
@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
                 p
               </p>
               <div className="header-cart">
-                <img src="/assets/cart-icon.svg" className="header-cart-icon" />
+                <img src="/assets/cart-icon.svg" className="header-cart-icon" alt='icon'/>
                 <p>{cart.reduce((sum, value) => sum + value.count, 0)}</p>
               </div>
             </Link>

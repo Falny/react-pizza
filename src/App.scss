@@ -35,6 +35,10 @@ a {
   margin: 40px auto;
   padding: 30px 50px;
 
+  @media (max-width: 1040px) {
+    padding: 30px 25px;
+  }
+
   @media (max-width: 775px) {
     padding: 20px;
     width: calc(100vw - 100px);

@@ -34,15 +34,24 @@ export const Header: React.FC = () => {
             <p>Самая вкусная пицца на всей земле</p>
           </div>
         </Link>
-        <Search />
+
         {location.pathname !== "/cart" && (
-          <Link to="/cart" className="header-right">
-            <p>{cart.reduce((sum, value) => sum + (value.price * value.count), 0)} p</p>
-            <div className="header-cart">
-              <img src="/assets/cart-icon.svg" className="header-cart-icon" />
-              <p>{cart.reduce((sum, value) => sum + value.count, 0)}</p>
-            </div>
-          </Link>
+          <>
+            <Search />
+            <Link to="/cart" className="header-right">
+              <p>
+                {cart.reduce(
+                  (sum, value) => sum + value.price * value.count,
+                  0
+                )}
+                p
+              </p>
+              <div className="header-cart">
+                <img src="/assets/cart-icon.svg" className="header-cart-icon" />
+                <p>{cart.reduce((sum, value) => sum + value.count, 0)}</p>
+              </div>
+            </Link>
+          </>
         )}
       </div>
     </>

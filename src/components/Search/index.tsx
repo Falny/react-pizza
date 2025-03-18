@@ -10,14 +10,15 @@ export const Search: React.FC = () => {
 
   const [value, setValue] = React.useState('')
 
-  const updateInput = React.useCallback(
-    debounce((str:string) => {
-      dispatch(setValueInput(str));
-    }, 1000), []
-  );
-
   const inputRef = React.useRef<HTMLInputElement | null>(null);
   const dispatch = useDispatch();
+
+   const updateInput = React.useCallback(
+     debounce((str: string) => {
+       dispatch(setValueInput(str));
+     }, 1000),
+     []
+   );
 
   const onClickDel = () => {
     setValue('');

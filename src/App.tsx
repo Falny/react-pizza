@@ -79,7 +79,7 @@ export const App = () => {
     }
 
     isSearch.current = false;
-  }, [category, sort, valueInput, currentPage, fetchData]);
+  }, [category, sort, valueInput, currentPage]);
 
   React.useEffect(() => {
     if (isMounted.current) {
